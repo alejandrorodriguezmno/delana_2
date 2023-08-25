@@ -1,0 +1,33 @@
+<!--
+  templateType: section
+  label: Logo slider
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/logo-slider.jpg
+  description: "Logo slider module."
+-->
+
+{% dnd_section
+  background_linear_gradient={
+    "colors" : [ "rgba(255, 255, 255, 1)", "rgba(250, 250, 250, 1)" ],
+    "direction" : "to bottom"
+  },
+  padding={
+    "default" : {
+      "bottom" : "30px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/logo-slider",
+        offset=0,
+        width=12
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

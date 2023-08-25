@@ -1,0 +1,428 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Landing Page - Form
+  screenshotPath: ../images/template-previews/landing-page.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+  {% dnd_area 'dnd_area' label='Main section' %}
+
+  {% dnd_section
+    background_image={
+      "background_position" : "MIDDLE_CENTER",
+      "background_size" : "cover",
+      "image_url" : get_asset_url('../images/bg-bottom-pyramid.png')
+    },
+    padding={
+      "default" : {
+        "bottom" : "100px",
+        "top" : "100px"
+      },
+      "mobile" : {
+        "bottom" : "80px",
+        "top" : "80px"
+      }
+    }
+  %}
+    {% dnd_column
+      offset=0,
+      width=6,
+      padding={
+        "default" : {
+          "right" : "40px"
+        },
+        "mobile" : {
+          "right" : "0px"
+        }
+      }
+    %}
+      {% dnd_row %}
+        {% dnd_module
+          path="@hubspot/rich_text",
+          offset=0,
+          width=12
+        %}
+          {% module_attribute "html" %}
+            <div style="text-transform: uppercase; letter-spacing: 3px; text-align: left; font-size: 14px;"><span style="color: #000000;"><strong>Landing Page</strong></span></div>
+            <h1 style="text-align: left;"><span style="color: #000000;">Landing page template</span></h1>
+            <div style="font-size: 20px; line-height: 1.5; text-align: left;"><span style="color: #000000;">The headline and subheader tells us what you're offering and the form header closes the deal.&nbsp;</span></div>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_module
+          path="../modules/list",
+          offset=0,
+          width=12,
+          list_items=[ {
+            "icon" : {
+              "icon_set" : "fontawesome-5.0.10",
+              "name" : "check",
+              "type" : "SOLID",
+              "unicode" : "f00c"
+            },
+            "list_content" : "<div style='font-size: 20px;'>Lorem ipsum dolor sit amet</div>"
+          }, {
+            "icon" : {
+              "icon_set" : "fontawesome-5.0.10",
+              "name" : "check",
+              "type" : "SOLID",
+              "unicode" : "f00c"
+            },
+            "list_content" : "<div style='font-size: 20px;'>Lorem ipsum dolor sit amet</div>"
+          }, {
+            "icon" : {
+              "icon_set" : "fontawesome-5.0.10",
+              "name" : "check",
+              "type" : "SOLID",
+              "unicode" : "f00c"
+            },
+            "list_content" : "<div style='font-size: 20px;'>Lorem ipsum dolor sit amet</div>"
+          } ],
+          styles={
+            "icons" : {
+              "fill" : {
+                "color" : {
+                  "color" : "#030303",
+                  "css" : "#030303",
+                  "opacity" : 100
+                }
+              },
+              "presets" : {
+                "icon_color" : "light"
+              },
+              "size" : {
+                "size" : 14
+              },
+              "spacing" : {
+                "spacing" : {
+                  "css" : "padding: 8px;",
+                  "padding" : {
+                    "bottom" : {
+                      "units" : "px",
+                      "value" : 8
+                    },
+                    "left" : {
+                      "units" : "px",
+                      "value" : 8
+                    },
+                    "right" : {
+                      "units" : "px",
+                      "value" : 8
+                    },
+                    "top" : {
+                      "units" : "px",
+                      "value" : 8
+                    }
+                  }
+                }
+              }
+            }
+          }
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+    {% dnd_column
+      offset=6,
+      width=6,
+      padding={
+        "default" : {
+          "left" : "40px"
+        },
+        "mobile" : {
+          "left" : "0px"
+        }
+      },
+      margin={
+        "mobile" : {
+          "top" : "30px"
+        }
+      }
+    %}
+      {% dnd_row %}
+        {% dnd_module
+          path="@hubspot/form",
+          offset=0,
+          width=12,
+          form={
+            "form_id" : "590c43b0-3a22-4494-9030-1d58f12dabd7",
+            "form_type" : "HUBSPOT",
+            "message" : "Thanks for submitting the form.",
+            "redirect_url" : "http://www.daveroma.com",
+            "response_type" : "redirect"
+          }
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "40px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/logo-slider",
+        offset=0,
+        width=12
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{% dnd_section
+  background_color="rgba(250, 250, 250, 1)",
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "top" : "0px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=6,
+    padding={
+      "default" : {
+        "right" : "40px"
+      },
+      "mobile" : {
+        "bottom" : "20px",
+        "right" : "0px"
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/linked_image",
+        offset=0,
+        width=12,
+        horizontal_alignment="CENTER",
+        img={
+          "alt" : "img-team",
+          "height" : 958,
+          "loading" : "lazy",
+          "max_height" : 958,
+          "max_width" : 800,
+          "size_type" : "auto",
+          "src" : "../images/team.jpg",
+          "width" : 800
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=6,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        offset=0,
+        width=12
+      %}
+        {% module_attribute "html" %}
+          <div style="text-transform: uppercase; letter-spacing: 3px; text-align: left;"><span style="color: #000000;"><strong>HubSPot CMS</strong></span></div>
+          <h2>Build your company website using drag-and-drop.</h2>
+          <p style="font-size: 18px; line-height: 1.5;">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+          <p style="font-size: 18px; line-height: 1.5;">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/list",
+        offset=0,
+        width=12,
+        list_items=[ {
+          "icon" : {
+            "icon_set" : "fontawesome-5.0.10",
+            "name" : "check",
+            "type" : "SOLID",
+            "unicode" : "f00c"
+          },
+          "list_content" : "<div style='font-size: 20px;'>Lorem ipsum dolor sit amet</div>"
+        }, {
+          "icon" : {
+            "icon_set" : "fontawesome-5.0.10",
+            "name" : "check",
+            "type" : "SOLID",
+            "unicode" : "f00c"
+          },
+          "list_content" : "<div style='font-size: 20px;'>Lorem ipsum dolor sit amet</div>"
+        }, {
+          "icon" : {
+            "icon_set" : "fontawesome-5.0.10",
+            "name" : "check",
+            "type" : "SOLID",
+            "unicode" : "f00c"
+          },
+          "list_content" : "<div style='font-size: 20px;'>Lorem ipsum dolor sit amet</div>"
+        } ],
+        styles={
+          "icons" : {
+            "fill" : {
+              "color" : {
+                "color" : "#030303",
+                "css" : "#030303",
+                "opacity" : 100
+              }
+            },
+            "presets" : {
+              "icon_color" : "light"
+            },
+            "size" : {
+              "size" : 14
+            },
+            "spacing" : {
+              "spacing" : {
+                "css" : "padding: 8px;",
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 8
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 8
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 8
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 8
+                  }
+                }
+              }
+            }
+          }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=5
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        offset=0,
+        width=12
+      %}
+        {% module_attribute "html" %}
+          <div style="text-transform: uppercase; letter-spacing: 3px; text-align: left;"><span style="color: #000000;"><strong>HubSPot CMS</strong></span></div>
+          <h2>Manage your HubSpot website without a developer.</h2>
+          <p style="font-size: 18px; line-height: 1.5;">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/button",
+        offset=0,
+        width=12
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=5,
+    width=7,
+    padding={
+      "default" : {
+        "left" : "30px"
+      },
+      "mobile" : {
+        "left" : "0px"
+      }
+    },
+    margin={
+      "mobile" : {
+        "top" : "30px"
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/linked_image",
+        offset=0,
+        width=12,
+        horizontal_alignment="CENTER",
+        img={
+          "alt" : "Stocksy_txp9db27673udw200_Large_2772906",
+          "height" : 746,
+          "loading" : "lazy",
+          "max_height" : 746,
+          "max_width" : 1119,
+          "size_type" : "auto",
+          "src" : "../images/img-girl.jpg",
+          "width" : 1119
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{% dnd_section
+  background_color="rgba(250, 250, 250, 1)",
+  padding={
+    "default" : {
+      "bottom" : "80px",
+      "top" : "100px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/testimonial",
+        offset=0,
+        width=12,
+        author={
+          "content" : "<div style='text-align: center; font-weight: bold;'>Marie Benson</div><br><div style='text-align: center;'>Marketing Manager, Agriflora Inc.</div>"
+        }
+      %}
+        {% module_attribute "quote_text_1" %}
+          <h2 style="text-align: center;">"This theme lets our marketers maintain our website without a developer."</h2>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+  {% end_dnd_area %}
+{% endblock body %}

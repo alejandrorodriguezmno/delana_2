@@ -1,0 +1,37 @@
+<!--
+  templateType: section
+  label: Testimonial
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/testimonial.jpg
+  description: "Display testimonials on your site."
+-->
+
+{% dnd_section
+  background_color="rgba(250, 250, 250, 1)",
+  padding={
+    "default" : {
+      "bottom" : "80px",
+      "top" : "100px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/testimonial",
+        offset=0,
+        width=12,
+        author={
+          "content" : "<div style='text-align: center; font-weight: bold;'>Marie Benson</div><br><div style='text-align: center;'>Marketing Manager, Agriflora Inc.</div>"
+        }
+      %}
+        {% module_attribute "quote_text_1" %}
+          <h2 style="text-align: center;">"This theme lets our marketers maintain our website without a developer."</h2>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

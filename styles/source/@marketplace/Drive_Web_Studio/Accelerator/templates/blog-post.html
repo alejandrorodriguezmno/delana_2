@@ -1,0 +1,90 @@
+<!--
+  templateType: blog_post
+  isAvailableForNewContent: true
+  label: Blog Post
+  screenshotPath: ../images/template-previews/template.png
+-->
+{% set template_css = '../../css/templates/blog-post.css' %}
+{% extends './layouts/base-blog.html' %}
+
+{% block body %}
+
+{# Blog post wrapper #}
+
+<div class="content-wrapper">
+
+  {# Blog post #}
+
+  <div class="blog-post__column-wrapper">
+
+    <div class="blog-post__left-sidebar">
+      <a class="btn__back-to-posts" href="{{blog_all_posts_url('default')}}">
+        All posts
+      </a>     
+    </div>
+  
+    <div class="blog-post-section">
+      <article class="blog-post">
+        <time datetime="{{ content.publish_date }}" class="blog-post__timestamp">
+          {{ content.updated|datetimeformat('%B %e, %Y') }}
+        </time>
+        <h1 class="blog-post__headline">{{ content.name }}</h1>
+        <div class="blog-post__meta">
+          <div class="blog-post__author">
+            {% if content.blog_author.avatar %}
+              <img class="blog-post__author-image" src="{{ content.blog_author.avatar }}" width="50" loading="eager" alt="Picture of {{ content.blog_author.display_name }}">
+            {% endif %}By&NonBreakingSpace;
+            <a class="blog-post__author-name" href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}" rel="author">
+              {{ content.blog_post_author.display_name }}
+            </a>
+            <span>&nbsp;&middot;&nbsp;</span>            
+            <span class="reading-minutes">
+              {% set initialPostWords = content.post_body|striptags|wordcount %}
+              {% set calculatedPostWords = (initialPostWords/100) * 100 %}
+              {% set finishedPostWords = calculatedPostWords|divide(300)|round(2) %}
+              {% set number = finishedPostWords|round %}
+
+              {% if number < 1 %}  
+                1 minute read      
+              {% else %}
+                {{ finishedPostWords|round }} minute read
+              {% endif %}
+            </span>          
+          </div>        
+        </div>
+        <div class="blog-post__body">
+          {{ content.post_body }}
+        </div>     
+        
+        <div>
+          {% module 'social_sharing'
+            path='../modules/social-sharing',
+            styles={
+              'spacing': {
+                'spacing': {
+                  'margin': {
+                    'bottom': {
+                      'value': 22,
+                      'units': 'px'
+                    }
+                  }
+                }
+              }
+            }
+          %}
+        </div> 
+      </article>
+    </div>
+
+  </div>
+
+  {# Related posts #}
+
+  <div class="blog-post-section">
+    {% module 'related_posts'
+      path='../modules/related-posts'
+    %}
+  </div>
+
+</div>
+{% endblock body %}

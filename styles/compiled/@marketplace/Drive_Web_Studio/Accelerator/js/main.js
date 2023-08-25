@@ -1,0 +1,2 @@
+function domReady(callback){["interactive","complete"].indexOf(document.readyState)>=0?callback():document.addEventListener("DOMContentLoaded",callback)}function domRemove(el){null!==el.parentNode&&el.parentNode.removeChild(el)}
+//# sourceURL=https://cdn2.hubspot.net/hub/39559523/hub_generated/template_assets/112660667178/1682395078702/marketplace/Drive_Web_Studio/Accelerator/js/main.js

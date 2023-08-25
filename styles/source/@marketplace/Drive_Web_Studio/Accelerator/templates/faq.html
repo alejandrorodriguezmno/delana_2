@@ -1,0 +1,323 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: FAQ
+  screenshotPath: ../images/template-previews/faq.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+  {% dnd_area 'dnd_area' label='Main section' %}
+
+  {% dnd_section
+    background_linear_gradient={
+      "colors" : [ "rgba(255, 255, 255, 1)", "rgba(250, 250, 250, 1)" ],
+      "direction" : "to bottom"
+    }
+  %}
+    {% dnd_column
+      offset=0,
+      width=12
+    %}
+      {% dnd_row %}
+        {% dnd_module
+          path="@hubspot/rich_text",
+          offset=0,
+          width=12
+        %}
+          {% module_attribute "html" %}
+            <div style="text-align: center; text-transform: uppercase; letter-spacing: 3px;"><span style="color: #000000;"><strong>FAQ Templates</strong></span></div>
+            <h1 style="text-align: center;"><span style="color: #000000;">Frequently Asked Questions</span></h1>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}  
+
+  {% dnd_section
+    background_color="rgba(250, 250, 250, 1)",
+    padding={
+      "default" : {
+        "bottom" : "40px",
+        "top" : "20px"
+      }
+    }
+  %}
+    {% dnd_column
+      offset=0,
+      width=12
+    %}
+      {% dnd_row %}
+        {% dnd_module
+          path="@hubspot/rich_text",
+          offset=0,
+          width=12
+        %}
+          {% module_attribute "html" %}
+            <h3 style="text-align: left;"><span style="color: #000000;">Basics</span></h3>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_module
+          path="../modules/accordion"
+          offset=0,
+          width=12,
+          styles={
+            "accordions" : {
+              "border" : {
+                "border" : {
+                  "bottom" : {
+                    "color" : "#EEEEEE",
+                    "opacity" : 100,
+                    "style" : "solid",
+                    "width" : {
+                      "units" : "px",
+                      "value" : 2
+                    }
+                  },
+                  "left" : {
+                    "color" : "#EEEEEE",
+                    "opacity" : 100,
+                    "style" : "solid",
+                    "width" : {
+                      "units" : "px",
+                      "value" : 2
+                    }
+                  },
+                  "right" : {
+                    "color" : "#EEEEEE",
+                    "opacity" : 100,
+                    "style" : "solid",
+                    "width" : {
+                      "units" : "px",
+                      "value" : 2
+                    }
+                  },
+                  "top" : {
+                    "color" : "#EEEEEE",
+                    "opacity" : 100,
+                    "style" : "solid",
+                    "width" : {
+                      "units" : "px",
+                      "value" : 2
+                    }
+                  }
+                }
+              }
+            },
+            "content" : {
+              "background" : {
+                "color" : {
+                  "color" : "#FFFFFF",
+                  "opacity" : 100
+                }
+              }
+            },
+            "title" : {
+              "background" : {
+                "color" : {
+                  "color" : "#FFFFFF",
+                  "opacity" : 100
+                }
+              }
+            }
+          }
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}  
+
+  {% dnd_section
+    background_color="rgba(250, 250, 250, 1)",
+    padding={
+      "default" : {
+        "bottom" : "40px",
+        "top" : "20px"
+      }
+    }
+  %}
+    {% dnd_column
+      offset=0,
+      width=12
+    %}
+      {% dnd_row %}
+        {% dnd_module
+          path="@hubspot/rich_text",
+          offset=0,
+          width=12
+        %}
+          {% module_attribute "html" %}
+            <h3 style="text-align: left;"><span style="color: #000000;">Support</span></h3>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_module
+          path="../modules/accordion"
+          offset=0,
+          width=12,
+          styles={
+            "accordions" : {
+              "border" : {
+                "border" : {
+                  "bottom" : {
+                    "color" : "#EEEEEE",
+                    "opacity" : 100,
+                    "style" : "solid",
+                    "width" : {
+                      "units" : "px",
+                      "value" : 2
+                    }
+                  },
+                  "left" : {
+                    "color" : "#EEEEEE",
+                    "opacity" : 100,
+                    "style" : "solid",
+                    "width" : {
+                      "units" : "px",
+                      "value" : 2
+                    }
+                  },
+                  "right" : {
+                    "color" : "#EEEEEE",
+                    "opacity" : 100,
+                    "style" : "solid",
+                    "width" : {
+                      "units" : "px",
+                      "value" : 2
+                    }
+                  },
+                  "top" : {
+                    "color" : "#EEEEEE",
+                    "opacity" : 100,
+                    "style" : "solid",
+                    "width" : {
+                      "units" : "px",
+                      "value" : 2
+                    }
+                  }
+                }
+              }
+            },
+            "content" : {
+              "background" : {
+                "color" : {
+                  "color" : "#FFFFFF",
+                  "opacity" : 100
+                }
+              }
+            },
+            "title" : {
+              "background" : {
+                "color" : {
+                  "color" : "#FFFFFF",
+                  "opacity" : 100
+                }
+              }
+            }
+          }
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}  
+
+  {% dnd_section
+    background_color="rgba(250, 250, 250, 1)",
+    padding={
+      "default" : {
+        "bottom" : "40px",
+        "top" : "20px"
+      }
+    }
+  %}
+    {% dnd_column
+      offset=0,
+      width=12
+    %}
+      {% dnd_row %}
+        {% dnd_module
+          path="@hubspot/rich_text",
+          offset=0,
+          width=12
+        %}
+          {% module_attribute "html" %}
+            <h3 style="text-align: left;"><span style="color: #000000;">Support</span></h3>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_module
+          path="../modules/accordion"
+          offset=0,
+          width=12,
+          styles={
+            "accordions" : {
+              "border" : {
+                "border" : {
+                  "bottom" : {
+                    "color" : "#EEEEEE",
+                    "opacity" : 100,
+                    "style" : "solid",
+                    "width" : {
+                      "units" : "px",
+                      "value" : 2
+                    }
+                  },
+                  "left" : {
+                    "color" : "#EEEEEE",
+                    "opacity" : 100,
+                    "style" : "solid",
+                    "width" : {
+                      "units" : "px",
+                      "value" : 2
+                    }
+                  },
+                  "right" : {
+                    "color" : "#EEEEEE",
+                    "opacity" : 100,
+                    "style" : "solid",
+                    "width" : {
+                      "units" : "px",
+                      "value" : 2
+                    }
+                  },
+                  "top" : {
+                    "color" : "#EEEEEE",
+                    "opacity" : 100,
+                    "style" : "solid",
+                    "width" : {
+                      "units" : "px",
+                      "value" : 2
+                    }
+                  }
+                }
+              }
+            },
+            "content" : {
+              "background" : {
+                "color" : {
+                  "color" : "#FFFFFF",
+                  "opacity" : 100
+                }
+              }
+            },
+            "title" : {
+              "background" : {
+                "color" : {
+                  "color" : "#FFFFFF",
+                  "opacity" : 100
+                }
+              }
+            }
+          }
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}  
+
+  {% end_dnd_area %}
+{% endblock body %}

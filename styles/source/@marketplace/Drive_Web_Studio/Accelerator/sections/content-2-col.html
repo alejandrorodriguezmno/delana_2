@@ -1,0 +1,145 @@
+<!--
+  templateType: section
+  label: Content - 2 column
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/content-2-col.jpg
+  description: "2 column content section with image and text."
+-->
+{% dnd_section
+  background_color="rgba(250, 250, 250, 1)",
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    },
+    "mobile" : {
+      "top" : "0px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=6,
+    padding={
+      "default" : {
+        "right" : "40px"
+      },
+      "mobile" : {
+        "bottom" : "20px",
+        "right" : "0px"
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/linked_image",
+        offset=0,
+        width=12,
+        horizontal_alignment="CENTER",
+        img={
+          "alt" : "img-team",
+          "height" : 958,
+          "loading" : "lazy",
+          "max_height" : 958,
+          "max_width" : 800,
+          "size_type" : "auto",
+          "src" : "https://5018647.fs1.hubspotusercontent-na1.net/hubfs/5018647/Generator/images/img-team.jpg",
+          "width" : 800
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=6,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        offset=0,
+        width=12
+      %}
+        {% module_attribute "html" %}
+          <div style="text-transform: uppercase; letter-spacing: 3px; text-align: left;"><span style="color: #000000;"><strong>HubSPot CMS</strong></span></div>
+          <h2>Build your company website using drag-and-drop.</h2>
+          <p style="font-size: 18px; line-height: 1.5;">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+          <p style="font-size: 18px; line-height: 1.5;">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path='/themes/generator-free/modules/list',
+        offset=0,
+        width=12,
+        list_items=[ {
+          "icon" : {
+            "icon_set" : "fontawesome-5.0.10",
+            "name" : "check",
+            "type" : "SOLID",
+            "unicode" : "f00c"
+          },
+          "list_content" : "<div style='font-size: 20px;'>Lorem ipsum dolor sit amet</div>"
+        }, {
+          "icon" : {
+            "icon_set" : "fontawesome-5.0.10",
+            "name" : "check",
+            "type" : "SOLID",
+            "unicode" : "f00c"
+          },
+          "list_content" : "<div style='font-size: 20px;'>Lorem ipsum dolor sit amet</div>"
+        }, {
+          "icon" : {
+            "icon_set" : "fontawesome-5.0.10",
+            "name" : "check",
+            "type" : "SOLID",
+            "unicode" : "f00c"
+          },
+          "list_content" : "<div style='font-size: 20px;'>Lorem ipsum dolor sit amet</div>"
+        } ],
+        styles={
+          "icons" : {
+            "fill" : {
+              "color" : {
+                "color" : "#030303",
+                "css" : "#030303",
+                "opacity" : 100
+              }
+            },
+            "presets" : {
+              "icon_color" : "light"
+            },
+            "size" : {
+              "size" : 14
+            },
+            "spacing" : {
+              "spacing" : {
+                "css" : "padding: 8px;",
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 8
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 8
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 8
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 8
+                  }
+                }
+              }
+            }
+          }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

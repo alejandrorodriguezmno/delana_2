@@ -1,0 +1,39 @@
+/* Card */
+
+.card {
+  border: 0;
+}
+.dr_flex-cards {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: space-between;
+}
+.dr_flex-cards .dr_flex-cards__card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;  
+  margin-bottom: 1.5rem;
+}
+.dr_flex-cards--2-col .dr_flex-cards__card {  
+  width: calc(50% - 1rem);
+}
+.dr_flex-cards--3-col {
+  justify-content: flex-start;
+}
+.dr_flex-cards--3-col .dr_flex-cards__card {  
+  width: calc(33.3% - 1rem);
+}
+.dr_flex-cards--3-col .dr_flex-cards__card:nth-of-type(3n+1),
+.dr_flex-cards--3-col .dr_flex-cards__card:nth-of-type(3n+2){
+  margin-right: 1.5rem;
+}
+.dr_flex-cards .dr_flex-cards__button-wrapper {
+  margin-top: auto;
+}
+
+@media (max-width: 767px) {
+  .dr_flex-cards__card {
+    margin-right: initial !important;
+    width: 100% !important;
+  }
+}

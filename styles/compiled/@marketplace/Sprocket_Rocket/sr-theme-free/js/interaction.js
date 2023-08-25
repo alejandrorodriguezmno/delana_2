@@ -1,0 +1,2 @@
+jQuery.event.special.touchstart={setup:function(_,ns,handle){this.addEventListener("touchstart",handle,{passive:!ns.includes("noPreventDefault")})}},jQuery.event.special.touchmove={setup:function(_,ns,handle){this.addEventListener("touchmove",handle,{passive:!ns.includes("noPreventDefault")})}};
+//# sourceURL=https://cdn2.hubspot.net/hub/39559523/hub_generated/template_assets/112660129063/1682393834773/marketplace/Sprocket_Rocket/sr-theme-free/js/interaction.js

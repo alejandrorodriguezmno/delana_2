@@ -1,0 +1,62 @@
+<!--
+  templateType: blog_listing
+  isAvailableForNewContent: true
+  label: Blog Listing
+  screenshotPath: ../images/template-previews/template.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area'
+  label='Main section'
+%}
+
+  {# Banner #}
+
+  {% dnd_section   
+    max_width=1000,
+    padding={
+      "default": {
+        "top": 80,
+        "right": 0,
+        "bottom": 80,
+        "left": 0
+      },
+      "mobile": {
+        "top": 80,
+        "right": 20,
+        "bottom": 80,
+        "left": 20
+      }
+    }
+  %}
+    {% dnd_module
+
+      path='@hubspot/rich_text',
+      html='<div style="text-align: center;"><h1 style="color: #030303;">Resources and tools for building a lead generating website on HubSpot CMS</h1><p style="color: #030303; font-size: 1.25rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet.</p></div>'
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {# Post listing #}
+
+  {% dnd_section
+    vertical_alignment='TOP'
+  %}
+    {% dnd_module path='../modules/blog-listing' %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {# Pagination #}
+
+  {% dnd_section
+    padding={
+      'top': 0
+    }
+  %}
+    {% dnd_module path='../modules/pagination' %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+{% end_dnd_area %}
+{% endblock body %}
